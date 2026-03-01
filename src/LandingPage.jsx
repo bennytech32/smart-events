@@ -4,68 +4,131 @@ import './LandingPage.css';
 
 const LandingPage = () => {
   const navigate = useNavigate();
+  // Lugha Default sasa ni Kiingereza ('en')
   const [lang, setLang] = useState('en');
 
   const content = {
     en: {
       logo: "✨ SMART EVENTS",
-      navFeatures: "Features",
+      navFeatures: "Solutions",
       navPricing: "Pricing",
-      navContact: "Contact",
-      loginBtn: "Sign In",
+      navContact: "Contact Us",
+      loginBtn: "Client Login",
       langBtn: "🇹🇿 SW",
-      heroTitle1: "Plan Your Perfect",
-      heroTitle2: "Event Seamlessly",
-      heroDesc: "The most powerful digital platform in Tanzania for managing Conferences, Weddings, and Concerts. Track contributions, send QR tickets, and manage guests with one click.",
-      startBtn: "Get Started (Free)",
-      featTitle: "Why Choose Smart Events?",
+      heroTitle1: "Enterprise Digital Solution for",
+      heroTitle2: "Events & Fundraising",
+      heroDesc: "The world-class platform for managing charity pledges, wedding invitations, tour bookings, and corporate events with ultimate security and transparency.",
+      startBtn: "Start Free Trial",
+      salesBtn: "Book a Demo",
+      featTitle: "Enterprise-Grade Technology for Your Events",
       features: [
-        { icon: "🎫", title: "Smart Ticketing", desc: "Sell tickets online with secure mobile money integration. Manage tiers and early bird offers effortlessly." },
-        { icon: "📢", title: "Automated Messaging", desc: "Keep guests engaged with automated SMS, Email, and WhatsApp notifications for event updates." },
-        { icon: "🏢", title: "Venue Logistics", desc: "Plan your event timeline and logistics with interactive scheduling tools designed for precision." },
-        { icon: "📱", title: "QR Code Check-in", desc: "Eliminate queues! Use our mobile scanner for instant guest verification and live attendance monitoring." },
-        { icon: "📊", title: "Advanced Analytics", desc: "Gain insights with comprehensive post-event reports on attendee behavior and ticket sales growth." },
-        { icon: "💰", title: "Pledge Tracking", desc: "Perfect for weddings. Manage collected funds, track pending pledges, and monitor expenses in real-time." }
+        { icon: "🛡️", title: "Security & Transparency", desc: "All financial data and pledges are highly secured. Generate transparent reports for stakeholders and committees." },
+        { icon: "🎫", title: "Digital Ticketing (QR)", desc: "Sell tickets and manage tiers online. Each guest receives a secure QR code ticket to prevent fraud at the gate." },
+        { icon: "📢", title: "Automated Communication", desc: "Send automated SMS and WhatsApp messages to all guests. Remind them of their pledges or share tour itineraries." },
+        { icon: "📱", title: "High-Speed Gate Check-in", desc: "Use smartphones to scan guest tickets at the entrance. The system logs attendees in real-time." },
+        { icon: "🤝", title: "Charity & Pledge Tracking", desc: "Set fundraising targets. Track who has paid, who owes balances, and show live progress to your committee." },
+        { icon: "📊", title: "Advanced Analytics", desc: "Download comprehensive Excel reports showing attendance, total collections, and budget deficits instantly." }
       ],
-      pricingTitle: "Flexible Plans for Every Event",
+      pricingTitle: "Flexible Plans for Every Scale",
       pricingPackages: [
-        { title: "Starter", price: "Free", target: "For small family gatherings.", features: ["Up to 50 Guests", "Digital Invitations", "Email Support"], btnText: "Start Free" },
-        { title: "Premium", price: "Custom", target: "For Weddings & Corporate.", features: ["Up to 500 Guests", "WhatsApp Reminders", "QR Check-in", "24/7 Support"], btnText: "Contact Us", popular: true },
-        { title: "Enterprise", price: "Custom", target: "For Festivals & Concerts.", features: ["Unlimited Guests", "Custom Domain", "On-site Support"], btnText: "Contact Sales" }
+        { 
+          title: "Starter Plan", 
+          price: "Free", 
+          period: "for small events",
+          target: "Perfect for testing the platform.", 
+          features: ["Up to 50 Guests", "Digital QR Tickets", "Basic Dashboard", "Email Support"], 
+          btnText: "Start Free" 
+        },
+        { 
+          title: "Social Events", 
+          price: "Custom", 
+          period: "per event",
+          target: "For Weddings, Sendoffs & Parties.", 
+          features: ["Up to 500 Guests", "Pledge Tracking", "WhatsApp Reminders", "Scanner App"], 
+          btnText: "Request Quote" 
+        },
+        { 
+          title: "Corporate & Tours", 
+          price: "Custom", 
+          period: "per month/event",
+          target: "For Tour Operators & Corporate Seminars.", 
+          features: ["Unlimited Guests", "SMS Automation", "Staff Management", "Priority Support"], 
+          btnText: "Contact Sales", 
+          popular: true 
+        },
+        { 
+          title: "Harambee & Special Events", 
+          price: "Custom", 
+          period: "per project",
+          target: "Tailored for Fundraising & Mega Projects.", 
+          features: ["Live Pledge Tracking", "Transparency Tools", "Automated Thank You Notes", "Dedicated Manager"], 
+          btnText: "Consult Us",
+          special: true
+        }
       ],
-      footerDesc: "Tanzania's leading digital event solution.",
-      footerQuick: "Quick Links",
-      footerSocial: "Follow Us"
+      footerDesc: "Tanzania's leading digital platform revolutionizing event management, tour bookings, and transparent charity fundraising.",
+      footerQuick: "Quick Links"
     },
     sw: {
       logo: "✨ SMART EVENTS",
-      navFeatures: "Sifa",
-      navPricing: "Bei",
-      navContact: "Mawasiliano",
-      loginBtn: "Ingia",
+      navFeatures: "Huduma Zetu",
+      navPricing: "Vifurushi",
+      navContact: "Wasiliana Nasi",
+      loginBtn: "Ingia Ndani",
       langBtn: "🇬🇧 EN",
-      heroTitle1: "Panga na Simamia",
-      heroTitle2: "Tukio Lako Kikamilifu",
-      heroDesc: "Mfumo bora nchini Tanzania kwa ajili ya Mikutano, Harusi, na Matamasha. Fuatilia michango, tuma tiketi za QR, na dhibiti wageni kwa mbofyo mmoja.",
-      startBtn: "Anza Sasa (Bure)",
-      featTitle: "Kwanini Uchague Smart Events?",
+      heroTitle1: "Suluhisho la Kidijitali kwa",
+      heroTitle2: "Matukio na Harambee",
+      heroDesc: "Mfumo wa kiwango cha kimataifa wa kusimamia michango ya harambee, kadi za harusi, utalii, na tiketi za matamasha kwa uwazi na usalama wa hali ya juu.",
+      startBtn: "Anza Sasa Bure",
+      salesBtn: "Pata Demo ya Mfumo",
+      featTitle: "Teknolojia ya Uhakika kwa Matukio Yako",
       features: [
-        { icon: "🎫", title: "Usajili na Tiketi", desc: "Uza tiketi mtandaoni kwa malipo ya simu. Simamia aina mbalimbali za kadi kwa urahisi zaidi." },
-        { icon: "📢", title: "Mawasiliano Papo hapo", desc: "Wafikie wageni wako kwa SMS na WhatsApp. Tuma mialiko na vikumbusho ili kuhakikisha wanahudhuria." },
-        { icon: "🏢", title: "Mipango ya Ukumbi", desc: "Panga ratiba ya tukio lako hatua kwa hatua. Hakikisha kila kitu kinaenda kwa wakati uliopangwa." },
-        { icon: "📱", title: "Uhakiki kwa QR Code", desc: "Ondoa foleni mlangoni. Hakiki kadi za wageni kwa sekunde moja kwa kutumia app yetu ya simu." },
-        { icon: "📊", title: "Ripoti za Kina", desc: "Pata picha kamili ya tukio lako kupitia ripoti za kisasa za mauzo na idadi ya wageni waliofika." },
-        { icon: "💰", title: "Bajeti na Michango", desc: "Maalum kwa harusi. Simamia fedha, fuatilia ahadi zinazodaiwa, na dhibiti matumizi yote." }
+        { icon: "🛡️", title: "Usalama na Uwazi", desc: "Taarifa zote za fedha na michango zinalindwa kwa usalama wa hali ya juu. Toa ripoti zenye uwazi kwa wanakamati wote." },
+        { icon: "🎫", title: "Tiketi za Kidijitali (QR)", desc: "Uza tiketi na dhibiti viwango (Tiers) kwa njia ya mtandao. Kila mgeni anapata kadi yenye QR Code inayozuia udanganyifu mlangoni." },
+        { icon: "📢", title: "Mawasiliano ya Pamoja (Bulk)", desc: "Tuma SMS na ujumbe wa WhatsApp kwa wageni wote kwa mkupuo. Wakumbushe kuhusu ahadi zao au wape ratiba ya safari." },
+        { icon: "📱", title: "Uhakiki wa Haraka Mlangoni", desc: "Tumia simu janja kuskeni kadi za wageni mlangoni. Mfumo unarekodi na kutofautisha walioingia na ambao bado." },
+        { icon: "🤝", title: "Ufuatiliaji wa Harambee", desc: "Weka malengo ya harambee (Target). Fuatilia nani ametoa, nani amebakiza ahadi, na onyesha maendeleo kwa wakati halisi (Live)." },
+        { icon: "📊", title: "Ripoti za Kiuchambuzi", desc: "Pakua ripoti kamili za Excel zikionyesha mahudhurio, makusanyo, na baki la bajeti ili kurahisisha mahesabu ya mwisho." }
       ],
-      pricingTitle: "Chagua Kifurushi Kinachokufaa",
+      pricingTitle: "Vifurushi Vinavyoendana na Mahitaji Yako",
       pricingPackages: [
-        { title: "Bure", price: "Bure", target: "Kwa vikao vidogo vya familia.", features: ["Hadi Wageni 50", "Mialiko ya Kidijitali", "Msaada wa Email"], btnText: "Anza Bure" },
-        { title: "Premium", price: "Maelewano", target: "Kwa Harusi na Semina.", features: ["Hadi Wageni 500", "SMS & WhatsApp", "QR Check-in", "Msaada 24/7"], btnText: "Wasiliana Nasi", popular: true },
-        { title: "Enterprise", price: "Maelewano", target: "Kwa Matamasha Makubwa.", features: ["Wageni Bila Kikomo", "Custom Domain", "Meneja Maalum"], btnText: "Wasiliana nasi" }
+        { 
+          title: "Kifurushi cha Bure", 
+          price: "Bure", 
+          period: "kwa matukio madogo",
+          target: "Bora kwa kujaribu mfumo.", 
+          features: ["Hadi Wageni 50", "Tiketi za QR", "Muhtasari wa Msingi", "Msaada wa Email"], 
+          btnText: "Anza Bure" 
+        },
+        { 
+          title: "Sherehe & Harusi", 
+          price: "Maelewano", 
+          period: "kwa tukio",
+          target: "Kwa Harusi, Sendoff na Vikao.", 
+          features: ["Hadi Wageni 500", "Kufuatilia Michango", "WhatsApp Reminders", "Scanner App"], 
+          btnText: "Omba Bei" 
+        },
+        { 
+          title: "Mikutano & Utalii", 
+          price: "Maelewano", 
+          period: "kwa mwezi/tukio",
+          target: "Kwa Makampuni ya Utalii na Mikutano.", 
+          features: ["Wageni Bila Kikomo", "SMS Automation", "Msaada wa 24/7", "Ripoti Kamili"], 
+          btnText: "Wasiliana na Mauzo", 
+          popular: true 
+        },
+        { 
+          title: "Harambee & Taasisi", 
+          price: "Maelewano", 
+          period: "kwa mradi",
+          target: "Maalum kwa Kamati za Ujenzi na Matibabu.", 
+          features: ["Live Pledge Tracking", "Uwazi wa Kifedha", "Ujumbe wa Shukrani", "Meneja Maalum"], 
+          btnText: "Pata Ushauri",
+          special: true
+        }
       ],
-      footerDesc: "Suluhisho kuu la kidijitali jijini Dar es Salaam.",
-      footerQuick: "Viungo vya Haraka",
-      footerSocial: "Tufuate"
+      footerDesc: "Mfumo namba moja Tanzania unaoleta mapinduzi kwenye usimamizi wa matukio, utalii, na uchangiaji wa harambee.",
+      footerQuick: "Viungo vya Haraka"
     }
   };
 
@@ -92,11 +155,14 @@ const LandingPage = () => {
           <div className="hero-content">
             <h1>{t.heroTitle1} <br /> <span>{t.heroTitle2}</span></h1>
             <p>{t.heroDesc}</p>
-            <button className="btn-get-started pulse-glow" onClick={() => navigate('/register')}>{t.startBtn}</button>
+            <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <button className="btn-get-started pulse-glow" onClick={() => navigate('/register')}>{t.startBtn}</button>
+              <button className="btn-get-started" style={{ background: 'transparent', border: '2px solid white', boxShadow: 'none' }} onClick={() => navigate('/contact')}>
+                {t.salesBtn}
+              </button>
+            </div>
           </div>
         </section>
-
-        
 
         <section id="features" className="features-section animated-fade-in">
           <h2 className="section-title">{t.featTitle}</h2>
@@ -115,15 +181,32 @@ const LandingPage = () => {
           <h2 className="section-title">{t.pricingTitle}</h2>
           <div className="pricing-grid">
             {t.pricingPackages.map((pkg, index) => (
-              <div className={`pricing-card ${pkg.popular ? 'popular' : ''}`} key={index}>
-                {pkg.popular && <div className="popular-badge">Recommended</div>}
-                <h3>{pkg.title}</h3>
-                <h2 className="price-tag">{pkg.price}</h2>
-                <p className="pkg-target">{pkg.target}</p>
+              <div 
+                className={`pricing-card ${pkg.popular ? 'popular' : ''} ${pkg.special ? 'special-card' : ''}`} 
+                key={index}
+                style={pkg.special ? { background: '#0f172a', color: 'white', borderColor: '#0f172a' } : {}}
+              >
+                {pkg.popular && <div className="popular-badge">{lang === 'en' ? 'Top Choice 🔥' : 'Chaguo Bora 🔥'}</div>}
+                {pkg.special && <div className="popular-badge" style={{ background: '#d4af37' }}>{lang === 'en' ? 'Harambee Special 🤝' : 'Maalum Harambee 🤝'}</div>}
+                
+                <h3 style={pkg.special ? { color: '#f8fafc' } : {}}>{pkg.title}</h3>
+                <h2 className="price-tag" style={pkg.special ? { color: '#d4af37' } : {}}>{pkg.price}</h2>
+                <span style={{ display: 'block', marginBottom: '15px', color: pkg.special ? '#94a3b8' : '#64748b', fontSize: '0.85rem' }}>{pkg.period}</span>
+                <p className="pkg-target" style={pkg.special ? { color: '#cbd5e1' } : {}}>{pkg.target}</p>
+                
                 <ul className="pkg-features">
-                  {pkg.features.map((f, i) => <li key={i}><span>✔️</span> {f}</li>)}
+                  {pkg.features.map((f, i) => (
+                    <li key={i} style={pkg.special ? { color: '#f1f5f9' } : {}}>
+                      <span style={pkg.special ? { color: '#d4af37' } : {}}>✔️</span> {f}
+                    </li>
+                  ))}
                 </ul>
-                <button className={`btn-pricing ${pkg.popular ? 'btn-popular' : ''}`} onClick={() => navigate('/register')}>
+                
+                <button 
+                  className={`btn-pricing ${pkg.popular ? 'btn-popular' : ''}`} 
+                  style={pkg.special ? { background: '#d4af37', color: '#0f172a', borderColor: '#d4af37' } : {}}
+                  onClick={() => navigate(index === 0 ? '/register' : '/contact')}
+                >
                   {pkg.btnText}
                 </button>
               </div>
@@ -135,7 +218,7 @@ const LandingPage = () => {
       <footer className="footer-professional">
         <div className="footer-grid">
           <div className="footer-col">
-            <div className="logo" style={{color: '#fff', marginBottom: '15px'}}>{t.logo}</div>
+            <div className="logo" style={{color: '#fff', margin: '0 0 15px 0', fontSize: '1.2rem'}}>{t.logo}</div>
             <p>{t.footerDesc}</p>
           </div>
           <div className="footer-col">
@@ -143,16 +226,22 @@ const LandingPage = () => {
             <ul>
               <li><a href="#features">{t.navFeatures}</a></li>
               <li><a href="#pricing">{t.navPricing}</a></li>
-              <li><a href="/contact">Mawasiliano</a></li>
+              <li><a href="#" onClick={(e) => { e.preventDefault(); navigate('/contact'); }}>{t.navContact}</a></li>
             </ul>
           </div>
           <div className="footer-col">
             <h3>B-Tech Creations</h3>
-            <p>Empowering organizers through next-gen technology.</p>
+            <p>Empowering organizers, committees, and enterprises through next-gen technology.</p>
+            <div style={{ marginTop: '15px' }}>
+              <p style={{ color: '#cbd5e1', marginBottom: '8px' }}>📍 Dar es Salaam, Tanzania</p>
+              {/* EDIT NAMBA YAKO HAPA CHINI 👇 */}
+              <p style={{ color: '#cbd5e1', marginBottom: '8px' }}>📞 +255 7XX XXX XXX</p>
+              <p style={{ color: '#cbd5e1' }}>📧 info@smartevents.co.tz</p>
+            </div>
           </div>
         </div>
         <div className="footer-bottom">
-          <p>© 2026 Smart Events. Dar es Salaam, Tanzania.</p>
+          <p>© {new Date().getFullYear()} Smart Events by B-Tech Creations. All Rights Reserved.</p>
         </div>
       </footer>
     </div>
